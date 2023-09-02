@@ -56,6 +56,7 @@ function btnBlog() {
 }
 
 function btnMusic() {
+  loadData("1001");
   document.getElementById("btn-music").classList =
     "btn btn-sm bg-[#FF1F3D] text-white border-none rounded";
   document.getElementById("btn-all").classList =
@@ -64,9 +65,9 @@ function btnMusic() {
     "btn btn-sm bg-gray-300 text-gray-700 border-none rounded";
   document.getElementById("btn-drawing").classList =
     "btn btn-sm bg-gray-300 text-gray-700 border-none rounded";
-  loadData("1001");
 }
 function btnComedy() {
+  loadData("1003");
   document.getElementById("btn-comedy").classList =
     "btn btn-sm bg-[#FF1F3D] text-white border-none rounded";
   document.getElementById("btn-all").classList =
@@ -75,9 +76,9 @@ function btnComedy() {
     "btn btn-sm bg-gray-300 text-gray-700 border-none rounded";
   document.getElementById("btn-drawing").classList =
     "btn btn-sm bg-gray-300 text-gray-700 border-none rounded";
-  loadData("1003");
 }
 function btnDrawing() {
+  forSort = 0;
   document.getElementById("btn-drawing").classList =
     "btn btn-sm bg-[#FF1F3D] text-white border-none rounded";
   document.getElementById("btn-all").classList =
@@ -98,6 +99,7 @@ function btnDrawing() {
   `;
 }
 function btnAll() {
+  loadData("1000");
   document.getElementById("btn-all").classList =
     "btn btn-sm bg-[#FF1F3D] text-white border-none rounded";
   document.getElementById("btn-music").classList =
@@ -106,7 +108,6 @@ function btnAll() {
     "btn btn-sm bg-gray-300 text-gray-700 border-none rounded";
   document.getElementById("btn-drawing").classList =
     "btn btn-sm bg-gray-300 text-gray-700 border-none rounded";
-  loadData("1000");
 }
 
 async function loadSortData(id) {
@@ -163,5 +164,9 @@ async function loadSortData(id) {
 }
 
 function btnSort() {
-  loadSortData(forSort);
+  if (forSort !== 0) {
+    loadSortData(forSort);
+  } else {
+    return;
+  }
 }
