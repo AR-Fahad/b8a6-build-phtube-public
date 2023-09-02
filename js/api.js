@@ -74,7 +74,7 @@ function btnDrawing() {
     "btn btn-sm bg-gray-300 text-gray-700 border-none rounded";
   document.getElementById("card-sec").innerHTML = "";
   document.getElementById("card-sec").classList =
-    "p-20 text-center items-center";
+    "p-24 text-center items-center";
 
   document.getElementById("card-sec").innerHTML = `
   <div><img class="mx-auto" src="images/Icon.png" alt=""></div>
